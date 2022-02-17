@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/login/style.css">
+    <script defer src="/src/js/jsencrypt.min.js"></script>
+    <script defer src="/src/js/aes.js"></script>
+    <script defer src="/src/js/utils.js"></script>
+    <script defer src="/login/main.js"></script>
+    <title> Logovanje </title>
+</head>
+<body>
+    <main id="app">
+        <h3 class="title">
+            Unesite svoje podatke za ulogovanje:
+        </h3>
+
+        <form action="/login_voter" method="post" class="user-form">
+            <fieldset class="input-box">
+                <label class="label" for="vid"> Glasački ID: </label>
+                <input type="text" name="voter_id" id="vid" placeholder="1234">
+                <img src="/src/icons/warning.svg" alt="greska" class="warning-icon" title="Glasački ID ima 4 karaktera.">
+            </fieldset>
+
+            <fieldset class="input-box">
+                <label class="label" for="vpass"> Glasačka šifru: </label>
+                <input type="password" name="voter_password" id="vpass" placeholder="Abcdefgh1234">
+                <img src="/src/icons/warning.svg" alt="greska" class="warning-icon" title="Unesite ipravnu šifru.">
+            </fieldset>
+
+            <button type="submit" class="button"> Uloguj Me </button>
+        </form>
+    </main>
+</body>
+</html>
